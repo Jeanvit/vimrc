@@ -1,6 +1,6 @@
 # Jean's .VIMRC
 
-This is my .vimrc I'm currently using.
+This is the .vimrc I'm currently using.
 
 # Plugins
 
@@ -19,5 +19,5 @@ This is my .vimrc I'm currently using.
 
 - `git clone` to your `home` folder 
 -  Start Vim and run `:PluginInstall`
--  Restart Vim. Done.
+-  Restart. Done.
 
