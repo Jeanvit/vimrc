@@ -42,11 +42,10 @@ syntax on
 colorscheme monokai
 
 "Run python3 if f5 is pressed
-autocmd FileType python nnoremap <buffer> <F5> :exec '!clear; python3' shellescape(@%, 1)<cr>
-
+map <F5> :w<CR>:!python3 %<CR>
 "Mouse scroll for comfortable motion
-noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<CR>
-noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>
+noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(30)<CR>
+noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-30))<CR>
 
 
 "Identation
@@ -60,3 +59,9 @@ map <C-n> :NERDTreeToggle<CR>
 
 "Close vim if if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
+
