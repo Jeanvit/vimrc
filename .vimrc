@@ -42,7 +42,7 @@ syntax on
 colorscheme monokai
 
 "Run python3 if f5 is pressed
-map <F5> :w<CR>:!python3 %<CR>
+map <F5>  :w<CR>:!python3 %<CR>
 "Mouse scroll for comfortable motion
 noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(30)<CR>
 noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-30))<CR>
@@ -64,4 +64,6 @@ vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
+map <Enter> o<ESC>
+map <S-Enter> O<ESC>
 
