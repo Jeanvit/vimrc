@@ -32,10 +32,11 @@ Plugin 'yuttie/comfortable-motion.vim'
 Plugin 'crusoexia/vim-monokai'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'nvie/vim-flake8'
 
 call vundle#end()
 
-
+let python_highlight_all=1
 filetype plugin indent on
 syntax on
 
@@ -43,16 +44,28 @@ colorscheme monokai
 
 "Run python3 if f5 is pressed
 map <F5>  :w<CR>:!python3 %<CR>
+
 "Mouse scroll for comfortable motion
 noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(30)<CR>
 noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-30))<CR>
 
-
+:set listchars=tab:\|\ 
+:set list
 "Identation
 set tabstop=4
 set autoindent
 set laststatus=2
 set number
+
+"Syntastic configuration
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 "Nerdtree shortcut Ctrl N
 map <C-n> :NERDTreeToggle<CR>
