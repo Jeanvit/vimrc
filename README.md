@@ -17,7 +17,10 @@ This is the .vimrc I'm currently using.
 
 # How to use
 
-- `git clone` to your `home` folder 
+-  Make sure to backup your .vimrc
+-  Copy my `.vimrc` file to your `home` folder
+-  Set up Vundle: run `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 -  Start Vim and run `:PluginInstall`
--  Restart. Done.
+-  Restart Vim. 
+-  Profit!
 
