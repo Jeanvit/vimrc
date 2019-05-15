@@ -33,6 +33,7 @@ Plugin 'crusoexia/vim-monokai'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'nvie/vim-flake8'
+Plugin 'ervandew/supertab'
 
 call vundle#end()
 
@@ -43,7 +44,8 @@ syntax on
 colorscheme monokai
 
 "Run python3 if f5 is pressed
-map <F5>  :w<CR>:!python3 %<CR>
+map <F5>  :w!<CR>:!python3 % -u<CR>
+map <F6>  :w!<CR>:!python3 %<CR>
 
 "Mouse scroll for comfortable motion
 noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(30)<CR>
@@ -62,6 +64,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -79,4 +82,5 @@ vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 map <Enter> o<ESC>
 map <S-Enter> O<ESC>
+
 

@@ -1,6 +1,6 @@
 # Jean's .VIMRC
 
-This is the .vimrc I'm currently using.
+This is the .vimrc I'm currently using. Mostly for ML with Python3
 
 # Plugins
 
@@ -14,6 +14,7 @@ This is the .vimrc I'm currently using.
 - crusoexia/vim-monokai
 - scrooloose/nerdtree
 - nathanaelkane/vim-indent-guides
+- ervandew/supertab
 
 # How to use
 
